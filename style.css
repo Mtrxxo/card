@@ -1,0 +1,376 @@
+*,
+*::after,
+*::before{
+    font-family: "Space Grotesk", sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    display: flex;
+    flex-flow: row nowrap;
+    height: 100vh;
+    width: 100vw;
+}
+
+section{
+    height: 100%;
+}
+
+.img-section{
+    width: 30%;
+    background-image: url(images/bg-main-desktop.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.img-section p{
+    color: hsl(0, 0%, 100%);
+}
+
+.card-back,
+.card-front,
+.card-logo{
+    position: absolute;
+}
+
+.card-front{
+    top: 7%;
+    left: 7%;
+}
+
+.card-back{
+    top: 55%;
+    left: 15%;
+}
+
+.card-logo{
+    top: 10%;
+    left: 10%;
+}
+
+.number-placeholder{
+    position: absolute;
+    top: 30%;
+    left: 10%;
+    font-size: 2rem;
+}
+
+.name-placeholder{
+    position: absolute;
+    top: 40%;
+    left: 10%;
+}
+
+.exp-placeholder{
+    position: absolute;
+    top: 40%;
+    left: 32.15%;
+}
+
+.cvc-placeholder{
+    position: absolute;
+    top: 73.15%;
+    left: 40%;
+}
+
+.information{
+    width: 70%;
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: center;
+    align-items: center;
+}
+
+form{
+    display: flex;
+    flex-flow: column nowrap;
+    align-items: center;
+    gap: 1rem;
+}
+
+.cardholder_name,
+.card_number{
+    display: flex;
+    flex-flow: column nowrap;
+}
+
+.cardholder_name input,
+.card_number input{
+    width: 320px;
+}
+
+.cvc_info{
+    display: flex;
+    flex-flow: column nowrap;
+}
+
+form input{
+    padding: 0.5rem 1rem;
+}
+
+.extra{
+    display: flex;
+    flex-flow: row nowrap;
+    gap: 1rem;
+}
+
+.extra input{
+    width: 100px;
+}
+
+button{
+    padding: 0.5rem 1rem;
+    width: 320px;
+    font-size: 1rem;
+    font-weight: 700;
+    color: hsl(0, 0%, 100%);
+    background-color: hsl(278, 68%, 11%);
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+label{
+    color: hsl(278, 68%, 11%);
+    font-weight: 700;
+    margin: 0 0 0.3rem;
+}
+
+.date_inputs{
+    margin: 0.3rem 0 0;
+}
+
+input{
+    border: 1.5px solid hsl(270, 3%, 87%);
+    border-radius: 5px;
+    color: hsl(279, 6%, 55%);
+    font-size: 1rem;
+}
+
+input:focus{
+    outline: none;
+}
+
+input:hover,
+input:focus{
+    border-left: 2px solid hsl(278, 94%, 30%);
+    border: 2px solid hsl(249, 99%, 64%);
+}
+
+.errormsg{
+    color: hsl(0, 100%, 66%);
+}
+
+h1{
+    letter-spacing: 2px;
+}
+
+.cont{
+    display: none;
+    flex-flow: column nowrap;
+    align-items: center;
+    justify-content: center;
+}
+
+.cont p{
+    margin: 0.5rem 0 1rem;
+}
+
+.cont img{
+    display: block;
+    margin: 0.5rem 0;
+}
+
+@media (min-width:360px){
+    body{
+        display: flex;
+        flex-flow: column nowrap;
+        width: 100vw;
+    }
+
+    .img-section,
+    .information{
+        width: 100%;
+    }
+
+    .img-section{
+        height: 40%;
+    }
+
+    .img-section img {
+        width: 300px;
+    }
+
+    .card-back{
+        position: fixed;
+        top: 15px;
+        left: 60px;
+    }
+
+    .card-front{
+        position: fixed;
+        top: 100px;
+        left: 15px;
+        z-index: 1;
+    }
+
+    .cvc-placeholder{
+        position: fixed;
+        top: 40px;
+        left: 300px;
+        z-index: 2;
+    }
+
+    .img-section .card-logo{
+        width: 50px;
+        position: fixed;
+        z-index: 2;
+        top: 120px;
+        left: 28px;
+    }
+
+    .number-placeholder{
+        font-size: 1.5rem;
+        position: fixed;
+        z-index: 2;
+        top: 180px;
+        left: 28px;
+    }
+
+    .name-placeholder{
+        z-index: 2;
+        position: fixed;
+        top: 220px;
+        left: 28px;
+    }
+
+    .exp-placeholder{
+        z-index: 2;
+        position: fixed;
+        top: 220px;
+        left: 245px;
+    }
+
+    form{
+        margin: 3rem 0 0;
+    }
+}
+
+@media (min-width:768px){
+    .img-section{
+        height: 50%;
+    }
+    
+   .img-section img{
+    width: 500px;
+   }
+
+   .img-section .card-logo{
+        top: 200px;
+        left: 100px;
+   }
+
+   .card-back{
+        left: 120px;
+   }
+
+   .card-front{
+        left: 60px;
+        top: 150px;
+   }
+
+   .cvc-placeholder{
+        top: 60px;
+        left: 550px;
+   }
+
+   .number-placeholder{
+        font-size: 2.3rem;
+        top: 300px;
+        left: 100px;
+   }
+
+   .name-placeholder{
+        left: 100px;
+        top: 380px;
+   }
+
+   .exp-placeholder{
+        left: 450px;
+        top: 380px;
+   }
+}
+
+@media (min-width:992px){
+    body{
+        display: flex;
+        flex-flow: row nowrap;
+    }
+
+    .img-section,
+    .information{
+        height: 100%;
+    }
+
+    .img-section{
+        width: 40%;
+    }
+
+    .card-back{
+        position: fixed;
+        top: 300px;
+        left: 150px;
+    }
+
+    .card-front{
+        position: fixed;
+        top: 30px;
+        left: 100px;
+    }
+
+    .img-section img{
+        width: 450px;
+    }
+
+    .img-section .card-logo{
+        width: 50px;
+        top: 50px;
+        left: 120px;
+        position: fixed;
+    }
+
+    .number-placeholder{
+        position: fixed;
+        top: 150px;
+        left: 120px;
+    }
+
+    .name-placeholder{
+        position: fixed;
+        top: 230px;
+        left: 120px;
+    }
+
+    .cvc-placeholder{
+        top: 410px;
+        left: 500px;
+    }
+
+    .exp-placeholder{
+        position: fixed;
+        top: 230px;
+        left: 475px;
+    }
+
+    form{
+        margin: 0 0 0 7rem;
+    }
+}
+
+@media (min-width:1200px){
+    form{
+        margin: 0;
+    }
+}
